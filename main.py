@@ -1,7 +1,5 @@
 import api, cash_on_hand, overheads, profit_loss
 
-
-
 print("Hello World! This is our Team's solution!")
 
 def add():
@@ -18,3 +16,12 @@ def multiply():
 add()
 delete()
 multiply()
+
+from api import mean_forex_closing_price
+from read_file import process_csv_file
+from write_file import report_deficit
+
+
+def main():
+    avg_cp = mean_forex_closing_price()
+    
