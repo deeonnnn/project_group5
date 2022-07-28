@@ -1,9 +1,19 @@
+from distutils.filelist import findall
 import requests
+from pathlib import Path
+import csv
+import json
 
-url = 'https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=FWCQ6BR9LLASNVQR'
-r = requests.get(url)
-data = r.json()
+home = Path.home()
+print(home)
 
+url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=FWCQ6BR9LLASNVQR"
+function= "CURRENCY_EXCHANGE_RATE"
+from_currency = "USD"
+to_currency ="SGD"
+response = requests.get(url)
+print(response)
+data = response.json()
 print(data)
 
 {
@@ -20,3 +30,14 @@ print(data)
     }
 }
 
+url = 'https://www.alphavantage.co/query?function=FX_WEEKLY&from_symbol=USD&to_symbol=SGD&apikey=FWCQ6BR9LLASNVQR'
+r = requests.get(url)
+data = r.json()
+
+print(json.dumps(data,indent=4))
+
+empty_list = []
+reader = data
+for line in reader:
+          for value in line:
+               empty_list.append(value)
