@@ -1,4 +1,3 @@
-from distutils.filelist import findall
 import requests
 from pathlib import Path
 import csv
@@ -7,14 +6,14 @@ import json
 home = Path.home()
 print(home)
 
-url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=FWCQ6BR9LLASNVQR"
-function= "CURRENCY_EXCHANGE_RATE"
-from_currency = "USD"
-to_currency ="SGD"
-response = requests.get(url)
-print(response)
-data = response.json()
-print(data)
+# url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=FWCQ6BR9LLASNVQR"
+# function= "CURRENCY_EXCHANGE_RATE"
+# from_currency = "USD"
+# to_currency ="SGD"
+# response = requests.get(url)
+# print(response)
+# data = response.json()
+# print(data)
 
 {
     "Realtime Currency Exchange Rate": {
@@ -33,11 +32,14 @@ print(data)
 url = 'https://www.alphavantage.co/query?function=FX_WEEKLY&from_symbol=USD&to_symbol=SGD&apikey=FWCQ6BR9LLASNVQR'
 r = requests.get(url)
 data = r.json()
-
-print(json.dumps(data,indent=4))
-
+import json
+# print(json.dumps(data["Time Series FX (Weekly)"],indent=4))
+newdata=data["Time Series FX (Weekly)"]
 empty_list = []
-reader = data
-for line in reader:
-          for value in line:
-               empty_list.append(value)
+for item in newdata:
+    empty_list.append(newdata[item]["4. close"])
+
+for i in range(0, len(empty_list)):
+    empty_list[i] = float(empty_list[i])
+# print(json.dumps(empty_list,indent=4))
+# print(empty_list)
