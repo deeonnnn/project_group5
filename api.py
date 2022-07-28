@@ -44,16 +44,8 @@ for item in newdata:
 for i in range(0, len(empty_list)):
     empty_list[i] = float(empty_list[i])
 # print(json.dumps(empty_list,indent=4))
-print(empty_list)
+# print(empty_list)
 
-def weekly_average():
-    """
-    function to calculate average weekly forex
-    """
-    total = 0
-    for avg in empty_list:
-            # mean
-            total += avg / len(empty_list)
-    return (f"Average weekly forex: {total}")
+weekly_average=sum(empty_list) / len(empty_list)
+print(weekly_average)
 
-print(weekly_average())
