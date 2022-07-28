@@ -6,14 +6,14 @@ import json
 home = Path.home()
 print(home)
 
-# url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=FWCQ6BR9LLASNVQR"
-# function= "CURRENCY_EXCHANGE_RATE"
-# from_currency = "USD"
-# to_currency ="SGD"
-# response = requests.get(url)
-# print(response)
-# data = response.json()
-# print(data)
+url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=FWCQ6BR9LLASNVQR"
+function= "CURRENCY_EXCHANGE_RATE"
+from_currency = "USD"
+to_currency ="SGD"
+response = requests.get(url)
+print(response)
+data = response.json()
+print(data)
 
 {
     "Realtime Currency Exchange Rate": {
@@ -29,9 +29,11 @@ print(home)
     }
 }
 
+
+
 url = 'https://www.alphavantage.co/query?function=FX_WEEKLY&from_symbol=USD&to_symbol=SGD&apikey=FWCQ6BR9LLASNVQR'
-r = requests.get(url)
-data = r.json()
+request = requests.get(url)
+data = request.json()
 import json
 # print(json.dumps(data["Time Series FX (Weekly)"],indent=4))
 newdata=data["Time Series FX (Weekly)"]
@@ -42,4 +44,16 @@ for item in newdata:
 for i in range(0, len(empty_list)):
     empty_list[i] = float(empty_list[i])
 # print(json.dumps(empty_list,indent=4))
-# print(empty_list)
+print(empty_list)
+
+def weekly_average():
+    """
+    function to calculate average weekly forex
+    """
+    total = 0
+    for avg in empty_list:
+            # mean
+            total += avg / len(empty_list)
+    return (f"Average weekly forex: {total}")
+
+print(weekly_average())
