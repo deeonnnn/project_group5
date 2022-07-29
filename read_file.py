@@ -56,6 +56,7 @@ def processproflos():
         next(reader)
         day=0
         prof=0
+        profitsurplus=1
         for row in reader:
             if day==0:
                 day=int(row[0])
