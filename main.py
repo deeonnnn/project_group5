@@ -1,8 +1,6 @@
 import requests
 import api
 
-print("Hello World! This is our Team's solution!")
-
 def add():
     print("This is function add")
     return
@@ -14,6 +12,7 @@ def delete():
 def multiply():
     print("This is function multiply")
     return
+
 add()
 delete()
 multiply()
