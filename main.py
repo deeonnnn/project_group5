@@ -17,7 +17,3 @@ def multiply():
 add()
 delete()
 multiply()
-
-add()
-delete()
-multiply()
