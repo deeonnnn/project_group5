@@ -2,6 +2,7 @@ from os import sep
 from pathlib import Path
 import csv
 from pickle import TRUE
+
 filepath1=Path.cwd()/"csv_reports"/"Cash On Hand.csv"
 def processcoh():
     with filepath1.open(mode="r", encoding="UTF-8", newline="")as file:
@@ -25,7 +26,7 @@ def processcoh():
                     day=int(row[0])+1
         return anotherlist
 
-print(processcoh())
+
 
 filepath2=Path.cwd()/"csv_reports"/"Overheads.csv"
 def processovrhds():
@@ -38,7 +39,7 @@ def processovrhds():
                 expense=float(row[1])
                 return(f"[HIGHEST OVERHEADS] {row[0]}: US${row[1]}")
 
-print(processovrhds())
+
 
 filepath3=Path.cwd()/"csv_reports"/"Profit and Loss.csv"
 def processproflos():
@@ -59,5 +60,3 @@ def processproflos():
                 elif prof<int(row[4]):
                     prof=int(row[4])
                     day=int(row[0])
-
-print(processproflos())
