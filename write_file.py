@@ -1,7 +1,7 @@
 from read_file import processcoh, processovrhds, processproflos
 from pathlib import Path
 textfile=Path.cwd()/"deficit_report.txt"
-# print(processovrhds())
+print(processcoh())
 
 def writingfunc():
     actualcoh=str(processcoh())
@@ -10,5 +10,5 @@ def writingfunc():
         file.write(actualcoh)
     pass
 
-print(writingfunc())
+# print(writingfunc())
 

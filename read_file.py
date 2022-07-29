@@ -10,6 +10,7 @@ def processcoh():
         next(reader)
         day=0
         coh=0
+        CashSurplus=1
         anotherlist=[]
         for row in reader:
             if day==0:
@@ -21,10 +22,17 @@ def processcoh():
                     anotherlist.append(f"[CASH DEFICIT] US${cohdiff} on day {day}")
                     day=int(row[0])+1
                     coh=int(row[1])
+                    CashSurplus=0
                 elif coh<int(row[1]):
                     coh=int(row[1])
                     day=int(row[0])+1
+    if CashSurplus==0:
         return anotherlist
+    else:
+        cashsurplus="[CASH SURPLUS] Cash on hand on each period is higher than the previous period."
+        return cashsurplus
+
+
 
 
 
