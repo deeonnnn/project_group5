@@ -58,5 +58,9 @@ def processproflos():
                     day=int(row[0])
                     return(f"[PROFIT DEFICIT] US${profdiff} on day {day}")
                 elif prof<int(row[4]):
-                    prof=int(row[4])
+                    prof=int (row[4])
                     day=int(row[0])
+             
+
+            
+ 
