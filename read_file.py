@@ -11,7 +11,7 @@ def processcoh():
         day=0
         coh=0
         CashSurplus=1
-        anotherlist=[]
+        listofdeficit=[]
         for row in reader:
             if day==0:
                 day=int(row[0])+1
@@ -19,7 +19,7 @@ def processcoh():
             elif day<int(row[0])+1:
                 if coh>int(row[1]):
                     cohdiff=coh-int(row[1])
-                    anotherlist.append(f"[CASH DEFICIT] US${cohdiff} on day {day}")
+                    listofdeficit.append(f"[CASH DEFICIT] US${cohdiff} on day {day}")
                     day=int(row[0])+1
                     coh=int(row[1])
                     CashSurplus=0
@@ -27,7 +27,7 @@ def processcoh():
                     coh=int(row[1])
                     day=int(row[0])+1
     if CashSurplus==0:
-        return anotherlist
+        return listofdeficit
     else:
         cashsurplus="[CASH SURPLUS] Cash on hand on each period is higher than the previous period."
         return cashsurplus
@@ -56,6 +56,7 @@ def processproflos():
         next(reader)
         day=0
         prof=0
+        listofdeficit=[]
         profitsurplus=1
         for row in reader:
             if day==0:
@@ -64,11 +65,18 @@ def processproflos():
             elif day<int(row[0]):
                 if prof>int(row[4]):
                     profdiff=prof-int(row[4])
+                    prof=int(row[4])
                     day=int(row[0])
-                    return(f"[PROFIT DEFICIT] US${profdiff} on day {day}")
+                    listofdeficit.append(f"[PROFIT DEFICIT] US${profdiff} on day {day}")
+                    profitsurplus=0
                 elif prof<int(row[4]):
                     prof=int (row[4])
                     day=int(row[0])
+    if profitsurplus==0:
+        return listofdeficit
+    else:
+        profitsurplus="[PROFIT SURPLUS] Net profit on each period is higher than the previous period."
+        return profitsurplus   
              
 
             
