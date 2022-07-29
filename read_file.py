@@ -13,13 +13,17 @@ def processcoh():
         anotherlist=[]
         for row in reader:
             if day==0:
-                day=int(row[0])
+                day=int(row[0])+1
                 coh=int(row[1])
-            elif day<int(row[0]):
+            elif day<int(row[0])+1:
                 if coh>int(row[1]):
-                    cohdiff=int(row[1])-coh
-                    day=int(row[0])
+                    cohdiff=coh-int(row[1])
                     anotherlist.append(f"[CASH DEFICIT] US${cohdiff} on day {day}")
+                    day=int(row[0])+1
+                    coh=int(row[1])
+                elif coh<int(row[1]):
+                    coh=int(row[1])
+                    day=int(row[0])+1
         return anotherlist
 
 print(processcoh())
@@ -55,8 +59,11 @@ def processproflos():
                 prof=int(row[4])
             elif day<int(row[0]):
                 if prof>int(row[4]):
-                    profdiff=int(row[4])-prof
+                    profdiff=prof-int(row[4])
                     day=int(row[0])
-                    return(f" [PROFIT DEFICIT]US${profdiff} on day {day}")
+                    return(f"[PROFIT DEFICIT] US${profdiff} on day {day}")
+                elif prof<int(row[4]):
+                    prof=int(row[4])
+                    day=int(row[0])
 
 print(processproflos())
