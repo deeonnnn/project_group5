@@ -3,9 +3,7 @@ from pathlib import Path
 import csv
 from pickle import TRUE
 filepath1=Path.cwd()/"csv_reports"/"Cash On Hand.csv"
-# print(filepath1.exists())
 def processcoh():
-    #cashonhand
     with filepath1.open(mode="r", encoding="UTF-8", newline="")as file:
         reader=csv.reader(file)
         next(reader)
@@ -30,14 +28,10 @@ def processcoh():
 print(processcoh())
 
 filepath2=Path.cwd()/"csv_reports"/"Overheads.csv"
-# print(filepath2.exists())
 def processovrhds():
-    #cashonhand
     with filepath2.open(mode="r", encoding="UTF-8", newline="")as file:
         reader=csv.reader(file)
         next(reader)
-        # for row in reader:
-        #     print(row)
         expense=0
         for row in reader:
             if expense<float(row[1]):
@@ -54,7 +48,6 @@ def processproflos():
         day=0
         prof=0
         for row in reader:
-            # print(row)
             if day==0:
                 day=int(row[0])
                 prof=int(row[4])

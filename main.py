@@ -1,5 +1,5 @@
 import requests
-import api, cash_on_hand, overheads, profit_loss
+import api
 
 print("Hello World! This is our Team's solution!")
 
