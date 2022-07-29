@@ -1,3 +1,4 @@
+from os import sep
 from pathlib import Path
 import csv
 from pickle import TRUE
@@ -57,6 +58,6 @@ def processproflos():
                 if prof>int(row[4]):
                     profdiff=int(row[4])-prof
                     day=int(row[0])
-                    return(f" [PROFIT DEFICIT]US${profdiff} on day {day}")
+                    return(f"[PROFIT DEFICIT] US${profdiff} on day {day}")
 
 print(processproflos())
