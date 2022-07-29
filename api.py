@@ -46,6 +46,5 @@ for i in range(0, len(empty_list)):
 # print(json.dumps(empty_list,indent=4))
 # print(empty_list)
 
-weekly_average=sum(empty_list) / len(empty_list)
+weekly_average = sum(empty_list) / len(empty_list)
 print(weekly_average)
-
