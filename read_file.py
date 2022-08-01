@@ -10,7 +10,7 @@ def process_csv():
         day=0
         coh=0
         CashSurplus=1
-        listofdeficit=[]
+        listofcashdeficit=[]
         for row in reader:
             if day==0:
                 day=int(row[0])+1
@@ -18,7 +18,7 @@ def process_csv():
             elif day<int(row[0])+1:
                 if coh>int(row[1]):
                     cohdiff=coh-int(row[1])
-                    listofdeficit.append(f"[CASH DEFICIT] US${cohdiff} on day {day}\n")
+                    listofcashdeficit.append(f"[CASH DEFICIT] US${cohdiff} on day {day}\n")
                     day=int(row[0])+1
                     coh=int(row[1])
                     CashSurplus=0
@@ -61,7 +61,7 @@ def process_csv():
                     newday=int(row[0])
 
     if CashSurplus==0 and profitsurplus==0:
-        return Highest_Overheads,listofdeficit,listofprofitdeficit
+        return Highest_Overheads,listofcashdeficit,listofprofitdeficit
     else:
         cashsurplus="[CASH SURPLUS] Cash on hand on each period is higher than the previous period.\n"
         profitsurplus="[PROFIT SURPLUS] Net profit on each period is higher than the previous period.\n"
