@@ -4,7 +4,7 @@ import csv
 from pickle import TRUE
 
 filepath1=Path.cwd()/"csv_reports"/"Cash On Hand.csv"
-def processcoh():
+def process_cash_on_hand():
     with filepath1.open(mode="r", encoding="UTF-8", newline="")as file:
         reader=csv.reader(file)
         next(reader)
@@ -37,7 +37,7 @@ def processcoh():
 
 
 filepath2=Path.cwd()/"csv_reports"/"Overheads.csv"
-def processovrhds():
+def process_over_heads():
     with filepath2.open(mode="r", encoding="UTF-8", newline="")as file:
         reader=csv.reader(file)
         next(reader)
@@ -50,7 +50,7 @@ def processovrhds():
 
 
 filepath3=Path.cwd()/"csv_reports"/"Profit and Loss.csv"
-def processproflos():
+def process_profit_loss():
     with filepath3.open(mode="r", encoding="UTF-8", newline="")as file:
         reader=csv.reader(file)
         next(reader)

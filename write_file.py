@@ -1,5 +1,3 @@
-from api import apifunction
-from read_file import processcoh, processovrhds, processproflos
 from pathlib import Path
 textfile=Path.cwd()/"deficit_report.txt"
 # print(processproflos())

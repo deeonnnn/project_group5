@@ -2,7 +2,7 @@ import requests
 from pathlib import Path
 import csv
 import json
-def apifunction():
+def api_function():
     home = Path.home()
     print(home)
 
