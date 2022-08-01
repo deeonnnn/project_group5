@@ -19,7 +19,7 @@ def processcoh():
             elif day<int(row[0])+1:
                 if coh>int(row[1]):
                     cohdiff=coh-int(row[1])
-                    listofdeficit.append(f"[CASH DEFICIT] US${cohdiff} on day {day}")
+                    listofdeficit.append(f"[CASH DEFICIT] US${cohdiff} on day {day}\n")
                     day=int(row[0])+1
                     coh=int(row[1])
                     CashSurplus=0
@@ -45,7 +45,7 @@ def processovrhds():
         for row in reader:
             if expense<float(row[1]):
                 expense=float(row[1])
-                return(f"[HIGHEST OVERHEADS] {row[0]}: US${row[1]}")
+                return(f"[HIGHEST OVERHEADS] {row[0]}: US${row[1]}\n")
 
 
 
@@ -67,7 +67,7 @@ def processproflos():
                     profdiff=prof-int(row[4])
                     prof=int(row[4])
                     day=int(row[0])
-                    listofdeficit.append(f"[PROFIT DEFICIT] US${profdiff} on day {day}")
+                    listofdeficit.append(f"[PROFIT DEFICIT] US${profdiff} on day {day}\n")
                     profitsurplus=0
                 elif prof<int(row[4]):
                     prof=int (row[4])
