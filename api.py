@@ -7,16 +7,17 @@ def apifunction():
     print(home)
 
     url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=FWCQ6BR9LLASNVQR"
-    function= "CURRENCY_EXCHANGE_RATE"
-    from_currency = "USD"
-    to_currency ="SGD"
+    # function= "CURRENCY_EXCHANGE_RATE"
+    # from_currency = "USD"
+    # to_currency ="SGD"
     response = requests.get(url)
     # print(response)
     data = response.json()
     # print(data)
     convrate=data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
+    finalconvrate=f"[CURRENCY CONVERSION RATE] US$1 = SG${round(float(convrate),2)}"
     # print(convrate)
-    return convrate
+    return finalconvrate
 {
     "Realtime Currency Exchange Rate": {
         "1. From_Currency Code": "USD",
@@ -31,3 +32,4 @@ def apifunction():
     }
 }
 
+# print(apifunction())
