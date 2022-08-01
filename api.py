@@ -15,7 +15,7 @@ def conversion_rate():
     data = response.json()
     # print(data)
     convrate=data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
-    finalconvrate=f"[CURRENCY CONVERSION RATE] US$1 = SG${round(float(convrate),2)}"
+    finalconvrate=f"[REAL TIME CURRENCY CONVERSION RATE] US$1 = SGD{round(float(convrate),2)}\n"
     # print(convrate)
     return finalconvrate
 {

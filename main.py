@@ -4,7 +4,7 @@ from write_file import deficit_report
 def main():
     conv_rate=conversion_rate()
     overheads,cash,profit,=process_csv()
-    deficit_report(overheads,cash,profit,conv_rate)
+    deficit_report(conv_rate,overheads,cash,profit)
 
 main()
 
