@@ -2,7 +2,7 @@ import requests
 from pathlib import Path
 import csv
 import json
-def api_function():
+def conversion_rate():
     home = Path.home()
     print(home)
 
