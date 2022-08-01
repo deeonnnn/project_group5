@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 [HIGHEST OVERHEADS] Salary Expense: US$30.8
 [CASH SURPLUS] Cash on hand on each period is higher than the previous period.
 [PROFIT SURPLUS] Net profit on each period is higher than the previous period.
 [CURRENCY CONVERSION RATE] US$1 = SG$1.38
+=======
+'[CASH DEFICIT] US$844158 on day 41', '[CASH DEFICIT] US$108892 on day 43'
+
+
+
+>>>>>>> 9284e167962cb087dbdd0b1efe6dc2c4271f5864
