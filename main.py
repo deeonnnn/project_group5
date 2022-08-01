@@ -1,8 +1,10 @@
 from api import conversion_rate 
-from read_file import process_cash_on_hand, process_profit_loss, process_over_heads
+from read_file import process_csv
 from write_file import deficit_report
 def main():
-    deficit_report(process_over_heads(), process_cash_on_hand(), process_profit_loss(), conversion_rate())
+    conv_rate=conversion_rate()
+    overheads,cash,profit,=process_csv()
+    deficit_report(overheads,cash,profit,conv_rate)
 
 main()
 
