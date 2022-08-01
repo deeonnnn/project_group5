@@ -32,9 +32,3 @@ def apifunction():
     }
 }
 
-<<<<<<< HEAD
-# print(apifunction())
-=======
-
-
->>>>>>> 9284e167962cb087dbdd0b1efe6dc2c4271f5864
