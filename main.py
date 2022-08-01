@@ -1,19 +1,8 @@
-import requests
-import api
+from api import apifunction
+from read_file import processcoh, processovrhds, processproflos
+from write_file import deficit_report, deficit_report
+def main():
+    deficit_report(processovrhds(), processcoh(), processproflos(), apifunction())
 
-def add():
-    print("This is function add")
-    return
-
-def delete():
-    print("This is function delete")
-    return
-
-def multiply():
-    print("This is function multiply")
-    return
-
-add()
-delete()
-multiply()
+main()
 

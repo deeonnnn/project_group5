@@ -29,7 +29,7 @@ def processcoh():
     if CashSurplus==0:
         return listofdeficit
     else:
-        cashsurplus="[CASH SURPLUS] Cash on hand on each period is higher than the previous period."
+        cashsurplus="[CASH SURPLUS] Cash on hand on each period is higher than the previous period.\n"
         return cashsurplus
 
 
@@ -75,7 +75,7 @@ def processproflos():
     if profitsurplus==0:
         return listofdeficit
     else:
-        profitsurplus="[PROFIT SURPLUS] Net profit on each period is higher than the previous period."
+        profitsurplus="[PROFIT SURPLUS] Net profit on each period is higher than the previous period.\n"
         return profitsurplus   
              
 
