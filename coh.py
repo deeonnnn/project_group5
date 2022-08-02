@@ -29,10 +29,6 @@ def coh_function(exchange_rate):
     else:
         return listofcashdeficit
 
-    
-    
-    
-    
-    
+ 
     
 
