@@ -31,10 +31,3 @@ def profitloss_function(exchange_rate):
     else:
         return listofprofitdeficit
     
-    
-    
-    bbbbbbbjbjbjbjbjbjbjb
-    
-    
-    
-    
