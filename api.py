@@ -29,9 +29,3 @@ def api_function():
         "9. Ask Price": "1.38861000",
     }
 }
-
-
-
-
-
-
