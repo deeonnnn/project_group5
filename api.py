@@ -1,8 +1,7 @@
 import requests
 from pathlib import Path
-import csv
-import json
-def conversion_rate():
+
+def api_function():
     home = Path.home()
     print(home)
 
@@ -13,11 +12,10 @@ def conversion_rate():
     response = requests.get(url)
     # print(response)
     data = response.json()
-    # print(data)
     convrate=data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
-    finalconvrate=f"[REAL TIME CURRENCY CONVERSION RATE] US$1 = SGD{round(float(convrate),2)}\n"
-    # print(convrate)
-    return finalconvrate
+    convrate=float(convrate)
+    return convrate
+
 {
     "Realtime Currency Exchange Rate": {
         "1. From_Currency Code": "USD",
@@ -31,4 +29,3 @@ def conversion_rate():
         "9. Ask Price": "1.38861000",
     }
 }
-
