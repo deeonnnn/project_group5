@@ -12,6 +12,3 @@ def overhead_function(exchange_rate):
                 Highest_Overheads=f"[HIGHEST OVERHEADS] {row[0].upper()}: SGD{round((float(row[1])*exchange_rate),1)}\n"
         return Highest_Overheads
 
-    
-    
-    
