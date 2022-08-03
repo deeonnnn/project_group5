@@ -1,6 +1,14 @@
 from pathlib import Path
 import csv
 def coh_function(exchange_rate):
+    """
+        The program will compute
+        the difference in Cash-on-Hand between each
+        day. If Cash-on-Hand is not consecutively higher
+        each day, the program will highlight the day
+        where Cash-on-Hand is lower than the previous
+        day and the value difference.
+    """
     filepath1=Path.cwd()/"csv_reports"/"Cash On Hand.csv"
     with filepath1.open(mode="r", encoding="UTF-8", newline="")as file:
         reader=csv.reader(file)

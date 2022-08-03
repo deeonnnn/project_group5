@@ -1,7 +1,9 @@
 from pathlib import Path
 import csv
+
 def profitloss_function(exchange_rate):
     filepath3=Path.cwd()/"csv_reports"/"Profit and Loss.csv"
+    
     with filepath3.open(mode="r", encoding="UTF-8", newline="")as file:
         reader3=csv.reader(file)
         next(reader3)
