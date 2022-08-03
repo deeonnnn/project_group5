@@ -1,8 +1,8 @@
 1. name = Ng Yi Kai
-student_id = S10243164
+student_id = S10243164D
 1. name = Mabel
-student_id = 
+student_id = S10242669E
 1. name = Deon
-student_id = 
+student_id = S10247704H
 1. name = Theresa
-student_id = S10242389
+student_id = S10242389H
