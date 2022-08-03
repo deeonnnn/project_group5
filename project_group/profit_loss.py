@@ -3,10 +3,12 @@ import csv
 
 def profitloss_function(exchange_rate):
     filepath3=Path.cwd()/"csv_reports"/"Profit and Loss.csv"
-    "  The program will compute
+    """
+        The program will compute
         whether we made a profit of loss.
         If we made a profit, it is True
-        If we made a loss, it would be false."
+        If we made a loss, it would be false.
+    """
     
     with filepath3.open(mode="r", encoding="UTF-8", newline="")as file:
         reader3=csv.reader(file)
