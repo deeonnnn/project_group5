@@ -5,4 +5,4 @@ Student_id = S10242669E
 1. Name = Deon Tan Jia Min
 Student_id = S10247704H
 1. Name = Theresa Tam
-student_id = S10242389H
+Student_id = S10242389H
