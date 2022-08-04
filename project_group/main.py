@@ -28,7 +28,3 @@ def main():
             file.writelines(profit_loss.profitloss_function(forex))
 
 main()
-
-
-
-
