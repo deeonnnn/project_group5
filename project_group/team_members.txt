@@ -2,7 +2,7 @@
 student_id = S10243164D
 1. name = Lian Yi Jun Mabel
 student_id = S10242669E
-1. name = Deon
+1. name = Deon Tan Jia Min
 student_id = S10247704H
 1. name = Theresa Tam
 student_id = S10242389H
