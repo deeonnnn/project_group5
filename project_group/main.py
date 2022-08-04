@@ -18,6 +18,7 @@ def main():
     else:
         textfile=Path.cwd()/"summary_report.txt"
         textfile.touch()
+    
         
         #this part writes the returned formatted data from the functions into the text file we created
         #it also formats the exchange rate returned from api_function
