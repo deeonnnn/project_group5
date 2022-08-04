@@ -1,5 +1,5 @@
 1. Name = Ng Yi Kai
-student_id = S10243164D
+Student_id = S10243164D
 1. name = Lian Yi Jun Mabel
 student_id = S10242669E
 1. name = Deon Tan Jia Min
