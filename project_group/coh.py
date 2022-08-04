@@ -10,7 +10,7 @@ def coh_function(exchange_rate):
         day and the value difference.
     """
     
-    filepath1=Path.cwd()/"csv_reports"/"Cash On Hand.csv"
+    filepath1=Path.cwd()/"project_group"/"csv_reports"/"Cash On Hand.csv"
    
     with filepath1.open(mode="r", encoding="UTF-8", newline="")as file:
         reader=csv.reader(file)

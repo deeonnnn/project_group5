@@ -8,7 +8,7 @@ def overhead_function(exchange_rate):
         and will only return the largest one.
     """
     
-    filepath2=Path.cwd()/"csv_reports"/"Overheads.csv"
+    filepath2=Path.cwd()/"project_group"/"csv_reports"/"Overheads.csv"
     
     with filepath2.open(mode="r", encoding="UTF-8", newline="")as file:
         reader2=csv.reader(file)

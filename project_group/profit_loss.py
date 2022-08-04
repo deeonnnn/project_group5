@@ -8,7 +8,7 @@ def profitloss_function(exchange_rate):
         If we made a profit, it is True
         If we made a loss, it would be false.
     """
-    filepath3=Path.cwd()/"csv_reports"/"Profit and Loss.csv"
+    filepath3=Path.cwd()/"project_group"/"csv_reports"/"Profit and Loss.csv"
     with filepath3.open(mode="r", encoding="UTF-8", newline="")as file:
         reader3=csv.reader(file)
         next(reader3)
