@@ -34,6 +34,7 @@ def profitloss_function(exchange_rate):
                     profdiff=prof-int(row[4])
                     prof=int(row[4])
                     day=int(row[0])
+                # multiply cash deficit by exchange rate to convert from usd to sgd
                     listofprofitdeficit.append(f"[PROFIT DEFICIT] DAY: {day}, AMOUNT: SGD{round((profdiff*exchange_rate),1)}\n")
                     profitsurplus=False
                 # cashsurplus turns false as cash deficit is present

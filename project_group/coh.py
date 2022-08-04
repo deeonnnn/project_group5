@@ -35,12 +35,13 @@ def coh_function(exchange_rate):
                 
                 if coh>int(row[1]):
                     cohdiff=coh-int(row[1])
+                # multiply cash deficit by exchange rate to convert from usd to sgd
                     listofcashdeficit.append(f"[CASH DEFICIT]  DAY: {day}, AMOUNT: SGD{round((cohdiff*exchange_rate),1)}\n")
                     day=int(row[0])+1
                     coh=int(row[1])
-                    cashsurplus=False
                 # cashsurplus turns false as cash deficit is present
-
+                    cashsurplus=False
+                
                 elif coh<int(row[1]):
                     coh=int(row[1])
                     day=int(row[0])+1

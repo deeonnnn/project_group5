@@ -28,5 +28,6 @@ def overhead_function(exchange_rate):
                 expense_type=row[0].upper()
         
         # expense after the forloop would have been larger than the all rows before and after it
+        # multiply cash deficit by exchange rate to convert from usd to sgd
         Highest_Overheads=f"[HIGHEST OVERHEADS] {expense_type}: SGD{round((expense*exchange_rate),1)}\n"
         return Highest_Overheads
