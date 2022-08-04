@@ -10,6 +10,8 @@ def main():
     
     forex=api.api_function()
     
+    # api_function returns string: API REQUEST ERROR FOUND if response was not successful
+    # this condition prevents the program fom crashing and maintains the flow by ending the program there
     if forex == "API REQUEST ERROR FOUND":
         print(forex)
     
@@ -17,6 +19,8 @@ def main():
         textfile=Path.cwd()/"summary_report.txt"
         textfile.touch()
         
+        #this part writes the returned formatted data from the functions into the text file we created
+        #it also formats the exchange rate returned from api_function
         with textfile.open(mode="w", encoding="UTF-8", newline="")as file:
             
             file.writelines(f"[REAL TIME CURRENCY CONVERSION RATE] USD1 = SGD{forex}\n")
