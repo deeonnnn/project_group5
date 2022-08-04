@@ -1,5 +1,4 @@
 import requests
-from pathlib import Path
 
 def api_function():
 
@@ -8,8 +7,6 @@ def api_function():
      to extract the real time exchange rate (Forex) in JSON
      output 
     """
-    home = Path.home()
-    print(home)
     url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=FWCQ6BR9LLASNVQR"
     # function= "CURRENCY_EXCHANGE_RATE"
     # from_currency = "USD"
