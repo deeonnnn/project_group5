@@ -24,4 +24,3 @@ def api_function():
     # this lets the main function know there is an error to prevent a crash
     else:
         return "API REQUEST ERROR FOUND"
-
