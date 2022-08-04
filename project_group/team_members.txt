@@ -4,5 +4,5 @@ Student_id = S10243164D
 Student_id = S10242669E
 3. Name = Deon Tan Jia Min
 Student_id = S10247704H
-4. Name = Theresa Tam Min
+4. Name = Theresa Tam Min En
 Student_id = S10242389H
