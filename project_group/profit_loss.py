@@ -41,7 +41,7 @@ def profitloss_function(exchange_rate):
                 elif prof<int(row[4]):
                     prof=int (row[4])
                     day=int(row[0])
-                 # updates the prof and day variable but skips appending to the list as there is no profit deficit
+                # updates the prof and day variable but skips appending to the list as there is no profit deficit
     
     if profitsurplus:
         Profitsurplus="[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY\n"

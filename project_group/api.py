@@ -1,7 +1,6 @@
 import requests
 
 def api_function():
-
     """
      This function makes an API call to https://www.alphavantage.co
      to extract the real time exchange rate (Forex) in JSON

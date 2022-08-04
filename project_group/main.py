@@ -21,14 +21,12 @@ def main():
         
         #this part writes the returned formatted data from the functions into the text file we created
         #it also formats the exchange rate returned from api_function
-        with textfile.open(mode="w", encoding="UTF-8", newline="")as file:
-            
+        with textfile.open(mode="w", encoding="UTF-8", newline="")as file:           
+           
             file.writelines(f"[REAL TIME CURRENCY CONVERSION RATE] USD1 = SGD{forex}\n")
-
+            
             file.writelines(overheads.overhead_function(forex))
-
             file.writelines(coh.coh_function(forex))
-
             file.writelines(profit_loss.profitloss_function(forex))
 
 main()
